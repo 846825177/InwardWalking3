@@ -16,6 +16,7 @@ import com.silent.fiveghost.guide.concat.Concat;
 import com.silent.fiveghost.guide.entity.LoginEntity;
 import com.silent.fiveghost.guide.mvp.Iview;
 import com.silent.fiveghost.guide.mvp.Presenters;
+import com.silent.fiveghost.guide.tools.Tools;
 import com.silent.fiveghost.guide.ui.BaseActivity;
 import com.zhy.autolayout.AutoRelativeLayout;
 
@@ -54,6 +55,10 @@ public class LoginActivity extends BaseActivity implements Iview<LoginEntity>, V
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.mLogin_login:
+                if(!Tools.isPhone(mLogin_user.getText().toString())) {
+                    showToast("请输入正确的手机号");
+                    return;
+                }
                 Map<String, String> mParams = new HashMap<>();
                 mParams.put("tel", mLogin_user.getText().toString());
                 mParams.put("password", mLogin_pwd.getText().toString());
@@ -86,22 +91,4 @@ public class LoginActivity extends BaseActivity implements Iview<LoginEntity>, V
 
     }
 
-    private void submit() {
-        // validate
-        String user = mLogin_user.getText().toString().trim();
-        if (TextUtils.isEmpty(user)) {
-            Toast.makeText(this, "user不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String pwd = mLogin_pwd.getText().toString().trim();
-        if (TextUtils.isEmpty(pwd)) {
-            Toast.makeText(this, "pwd不能为空", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // TODO validate success, do something
-
-
-    }
 }

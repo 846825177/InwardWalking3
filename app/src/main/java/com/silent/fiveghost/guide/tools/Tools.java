@@ -19,12 +19,24 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.regex.Pattern;
+
 /**
  * Created by 84682 on 2018/1/26.
  */
 
 public class Tools {
 
+    //手机号表达式
+    private final static Pattern phone_pattern = Pattern.compile("^(13|15|18)\\d{9}$");
+    /**
+     * 验证手机号是否正确
+     * @param phone 手机号码
+     * @return boolean
+     */
+    public static boolean isPhone(String phone) {
+        return phone_pattern.matcher(phone).matches();
+    }
 
     public static void setAlpha(Window window, AppCompatActivity activity){
         View decorview = window.getDecorView();

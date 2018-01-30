@@ -104,6 +104,10 @@ public class FindPwdActivity extends BaseActivity implements View.OnClickListene
         });
         Map<String, String> mParams = new HashMap();
         String phone = user_phone.getText().toString().trim();
+        if(!Tools.isPhone(phone)) {
+            showToast("请输入正确的手机号");
+            return;
+        }
         if (TextUtils.isEmpty(phone)) {
             Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
             return;
