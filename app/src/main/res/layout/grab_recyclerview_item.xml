@@ -10,7 +10,7 @@
     android:layout_marginRight="30px">
 
     <ImageView
-        android:id="@+id/iv_image"
+        android:id="@+id/mGrabItemImage"
         android:layout_width="210px"
         android:layout_height="210px"
         android:layout_alignParentLeft="true"
@@ -22,57 +22,57 @@
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/tv_cityname"
+        android:id="@+id/mGrabCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30px"
         android:layout_marginTop="20px"
-        android:layout_toEndOf="@+id/iv_image"
-        android:layout_toRightOf="@+id/iv_image"
+        android:layout_toEndOf="@+id/mGrabItemImage"
+        android:layout_toRightOf="@+id/mGrabItemImage"
         android:text="城市：丽江" />
 
     <TextView
-        android:id="@+id/tv_time"
+        android:id="@+id/mGrabTextTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_cityname"
-        android:layout_alignStart="@+id/tv_cityname"
-        android:layout_below="@+id/tv_cityname"
+        android:layout_alignLeft="@+id/mGrabCityName"
+        android:layout_alignStart="@+id/mGrabCityName"
+        android:layout_below="@+id/mGrabCityName"
         android:text="时间：2018.01" />
 
     <TextView
-        android:id="@+id/tv_number"
+        android:id="@+id/mGrabTextNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_time"
-        android:layout_alignStart="@+id/tv_time"
-        android:layout_below="@+id/tv_time"
+        android:layout_alignLeft="@+id/mGrabTextTime"
+        android:layout_alignStart="@+id/mGrabTextTime"
+        android:layout_below="@+id/mGrabTextTime"
         android:text="人数：4人" />
 
     <TextView
-        android:id="@+id/tv_love"
+        android:id="@+id/mGrabTouristHouse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_number"
-        android:layout_alignStart="@+id/tv_number"
-        android:layout_below="@+id/tv_number"
+        android:layout_alignLeft="@+id/mGrabTextNum"
+        android:layout_alignStart="@+id/mGrabTextNum"
+        android:layout_below="@+id/mGrabTextNum"
         android:text="旅游偏好：自然风景" />
 
     <TextView
-        android:id="@+id/tv_order_type"
+        android:id="@+id/mGrabTextOrderType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_love"
-        android:layout_alignStart="@+id/tv_love"
-        android:layout_below="@+id/tv_love"
+        android:layout_alignLeft="@+id/mGrabTouristHouse"
+        android:layout_alignStart="@+id/mGrabTouristHouse"
+        android:layout_below="@+id/mGrabTouristHouse"
         android:text="订单类型：一站式" />
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/mGrabRelative"
         android:layout_width="85px"
         android:layout_height="85px"
-        android:layout_alignBaseline="@+id/tv_time"
-        android:layout_alignBottom="@+id/tv_time"
+        android:layout_alignBaseline="@+id/mGrabTextTime"
+        android:layout_alignBottom="@+id/mGrabTextTime"
         android:layout_alignParentRight="true"
         android:background="@drawable/grab_shape">
 
@@ -83,5 +83,10 @@
             android:text="抢"
             android:textColor="#fff" />
     </com.zhy.autolayout.AutoRelativeLayout>
-
+    <include
+        android:layout_below="@id/mGrabItemImage"
+        android:layout_centerHorizontal="true"
+        layout="@layout/bottom"
+        android:layout_height="1px"
+        android:layout_width="match_parent" />
 </com.zhy.autolayout.AutoRelativeLayout>
