@@ -91,8 +91,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 showToast(e.toString());
             }
         });
+        String phone = mInsert_phone.getText().toString();
         Map<String,String> mParams = new HashMap<>();
-        mParams.put("tel",mInsert_phone.getText().toString());
+        if(!Tools.isPhone(phone)) {
+            showToast("请输入正确的手机号");
+            return;
+        }
+        mParams.put("tel",phone);
         mParams.put("password",mInsert_pwd.getText().toString());
         mParams.put("category","1");
         mParams.put("code",mInsert_yzm.getText().toString());
