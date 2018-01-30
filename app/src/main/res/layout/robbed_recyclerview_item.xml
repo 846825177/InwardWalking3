@@ -10,7 +10,7 @@
     android:layout_marginRight="30px">
 
     <ImageView
-        android:id="@+id/iv_image"
+        android:id="@+id/mRobbedImage"
         android:layout_width="210px"
         android:layout_height="210px"
         android:layout_alignParentLeft="true"
@@ -22,57 +22,57 @@
         tools:ignore="VectorDrawableCompat" />
 
     <TextView
-        android:id="@+id/tv_cityname"
+        android:id="@+id/mRobbedTextCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30px"
         android:layout_marginTop="20px"
-        android:layout_toEndOf="@+id/iv_image"
-        android:layout_toRightOf="@+id/iv_image"
+        android:layout_toEndOf="@+id/mRobbedImage"
+        android:layout_toRightOf="@+id/mRobbedImage"
         android:text="城市：丽江" />
 
     <TextView
-        android:id="@+id/tv_time"
+        android:id="@+id/mRobbedTextTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_cityname"
-        android:layout_alignStart="@+id/tv_cityname"
-        android:layout_below="@+id/tv_cityname"
+        android:layout_alignLeft="@+id/mRobbedTextCityName"
+        android:layout_alignStart="@+id/mRobbedTextCityName"
+        android:layout_below="@+id/mRobbedTextCityName"
         android:text="时间：2018.01" />
 
     <TextView
-        android:id="@+id/tv_number"
+        android:id="@+id/mRobbedTextNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_time"
-        android:layout_alignStart="@+id/tv_time"
-        android:layout_below="@+id/tv_time"
+        android:layout_alignLeft="@+id/mRobbedTextTime"
+        android:layout_alignStart="@+id/mRobbedTextTime"
+        android:layout_below="@+id/mRobbedTextTime"
         android:text="人数：4人" />
 
     <TextView
-        android:id="@+id/tv_love"
+        android:id="@+id/mRobbedTextTouist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_number"
-        android:layout_alignStart="@+id/tv_number"
-        android:layout_below="@+id/tv_number"
+        android:layout_alignLeft="@+id/mRobbedTextNum"
+        android:layout_alignStart="@+id/mRobbedTextNum"
+        android:layout_below="@+id/mRobbedTextNum"
         android:text="旅游偏好：自然风景" />
 
     <TextView
-        android:id="@+id/tv_order_type"
+        android:id="@+id/mRobbedTextOrderType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv_love"
-        android:layout_alignStart="@+id/tv_love"
-        android:layout_below="@+id/tv_love"
+        android:layout_alignLeft="@+id/mRobbedTextTouist"
+        android:layout_alignStart="@+id/mRobbedTextTouist"
+        android:layout_below="@+id/mRobbedTextTouist"
         android:text="订单类型：一站式" />
 
     <com.zhy.autolayout.AutoRelativeLayout
         android:id="@+id/mRobbedRelative"
         android:layout_width="85px"
         android:layout_height="85px"
-        android:layout_alignBaseline="@+id/tv_time"
-        android:layout_alignBottom="@+id/tv_time"
+        android:layout_alignBaseline="@+id/mRobbedTextTime"
+        android:layout_alignBottom="@+id/mRobbedTextTime"
         android:layout_alignParentRight="true">
 
         <TextView
@@ -82,6 +82,12 @@
             android:layout_centerInParent="true"
             android:text="30:00"
             android:textColor="#000" />
-    </com.zhy.autolayout.AutoRelativeLayout>
 
+    </com.zhy.autolayout.AutoRelativeLayout>
+    <include
+        android:layout_below="@id/mRobbedImage"
+        android:layout_centerHorizontal="true"
+        layout="@layout/bottom"
+        android:layout_height="1px"
+        android:layout_width="match_parent" />
 </com.zhy.autolayout.AutoRelativeLayout>
