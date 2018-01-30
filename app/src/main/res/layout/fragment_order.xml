@@ -1,0 +1,77 @@
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/big_one"
+    >
+
+
+
+    <RelativeLayout
+        android:background="@drawable/relative_shape_four"
+        android:layout_marginTop="352px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/my_qiangdan"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_one">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的抢单服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_yuyue"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_below="@id/my_qiangdan"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_two">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="预约订单服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/my_luxian"
+            android:layout_width="691px"
+            android:layout_height="130px"
+            android:layout_below="@id/my_yuyue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37px"
+            android:background="@drawable/relative_shape_three">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="我的路线服务"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>
