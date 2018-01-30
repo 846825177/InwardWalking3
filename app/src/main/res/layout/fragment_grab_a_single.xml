@@ -1,13 +1,60 @@
 <com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-  >
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    android:orientation="vertical">
+    <View
+        android:background="#34393f"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="抢单" />
+        android:layout_height="128px"/>
+    <!-- TODO: Update blank fragment layout -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#232730"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/mBtnTourist"
+            style="@style/TabText"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="旅行社订单"
+            android:textColor="@color/graba_textview_selector" />
+
+        <RadioButton
+            android:id="@+id/mBtnTravel"
+            style="@style/TabText"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="游客订单"
+            android:textColor="@color/graba_textview_selector" />
+
+        <RadioButton
+            android:id="@+id/mBtnRobbed"
+            style="@style/TabText"
+            android:layout_width="0dp"
+            android:layout_height="100px"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="已抢订单"
+            android:textColor="@color/graba_textview_selector" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/mFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
 
 </com.zhy.autolayout.AutoLinearLayout>
